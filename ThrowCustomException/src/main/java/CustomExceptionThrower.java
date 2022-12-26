@@ -7,9 +7,17 @@ public class CustomExceptionThrower {
      * exceptions could provide valuable information for when something goes wrong in the application.
      *
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
+     * @throws CustomException
      */
-    public void throwCustomException(){
-
+    public void throwCustomException() throws CustomException{
+        try {
+           String[] words = {"a", "b", "c"};
+           System.out.print(words[3]);
+            
+            
+        } catch (Exception e) {
+            throw new CustomException("out of range");
+        }
     }
 
 }
