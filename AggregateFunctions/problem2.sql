@@ -1,0 +1,1 @@
+SELECT COUNT(CASE last_name WHEN 'Smith' THEN 1 END) FROM employee;
