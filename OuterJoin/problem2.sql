@@ -1,0 +1,3 @@
+SELECT * FROM class
+LEFT OUTER JOIN textbook
+ON class.class_title = textbook.class_title;
