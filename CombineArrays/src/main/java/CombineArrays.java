@@ -1,5 +1,5 @@
 import java.util.Arrays;
-import java.util.stream.Stream;
+
 
 public class CombineArrays {
     /**
@@ -10,18 +10,21 @@ public class CombineArrays {
      * @return an array containing the contents of arr1 followed by the contents of arr2.
      */
     public int[] combine(int[] arr1, int[] arr2){
-        int arr1Length = arr1.length;
-        int arr2Length =arr2.length;
-        int[] combinedArray = new int [arr1Length + arr2Length];
+        // int arr1Length = arr1.length;
+        // int arr2Length =arr2.length;
+        // int[] combinedArray = new int [arr1Length + arr2Length];
 
-        System.arraycopy(arr1, 0, combinedArray, 0, arr1Length);
-        System.arraycopy(arr2, 0, combinedArray, arr1.length, arr2Length);
+        // System.arraycopy(arr1, 0, combinedArray, 0, arr1Length);
+        // System.arraycopy(arr2, 0, combinedArray, arr1.length, arr2Length);
 
-        String combinedArrayString = Arrays.toString(combinedArray);
+        // String combinedString = Arrays.toString(combinedArray);
+        // char[] combineArrayChar = combinedString.toCharArray();
 
-        int[] finalcombinedArray = new int[combinedArrayString.length()];
+       
+        int[]finalcombinedArray = Arrays.copyOf(arr1, arr1.length + arr2.length);
+        System.arraycopy(arr2, 0, finalcombinedArray, arr1.length, arr2.length);
 
 
-        return combinedArray;
+        return finalcombinedArray;
     }
 }
