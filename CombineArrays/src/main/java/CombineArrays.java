@@ -17,6 +17,10 @@ public class CombineArrays {
         System.arraycopy(arr1, 0, combinedArray, 0, arr1Length);
         System.arraycopy(arr2, 0, combinedArray, arr1.length, arr2Length);
 
+        String combinedArrayString = Arrays.toString(combinedArray);
+
+        int[] finalcombinedArray = new int[combinedArrayString.length()];
+
 
         return combinedArray;
     }
