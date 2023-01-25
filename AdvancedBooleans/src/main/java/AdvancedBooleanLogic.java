@@ -16,7 +16,7 @@ public class AdvancedBooleanLogic {
      * @return false if b1 and b2 are both true. Otherwise, return true.
      */
     public boolean returnNotBoth(boolean b1, boolean b2){
-        return false;
+        return (!b1 && !b2);
     }
     /**
      * b1 OR b2, BUT NOT BOTH
