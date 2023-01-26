@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * Official String documentation: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
  */
@@ -13,7 +11,8 @@ public class OtherStringMethods {
      * @return
      */
     public String partOfString(String s, int start, int end){
-        return "";
+        String subString = s.substring(start, end);
+        return subString;
     }
 
     /**
@@ -51,7 +50,6 @@ public class OtherStringMethods {
      */
     public String[] splitStringIntoMultipleStrings(String s1, String splitAround){
         String[] segmentArrayString = s1.split(splitAround);
-        Arrays.toString(segmentArrayString);
         return segmentArrayString; 
     }
 }
