@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class ArrayAbsoluteValue {
     /**
@@ -9,6 +10,14 @@ public class ArrayAbsoluteValue {
      * @return the absolute value array of nums.
      */
     public int[] getArrayAbs(int[] nums){
-        return null;
+        int[] absoluteValues = new int[nums.length];
+
+        for (int i=0; i<nums.length; i++){
+            absoluteValues[i] =Math.abs(nums[i]);
+
+
+        }
+        // System.out.println(Arrays.toString(absoluteValues));
+        return absoluteValues;
     }
 }
