@@ -12,44 +12,40 @@ public class CharComparison {
      */
     public int compare(char[] a, char[] b){
         int length = Math.min(a.length, b.length);
-        char[] tempa = new char[a.length+(b.length-a.length)];
-        char[] tempb = new char[b.length+(a.length-b.length)];
-       
-            for (int i=0; i<length; i++){
+        for (int i =0; i<length; i++){
 
-                if (a.length < b.length){
-                    a=tempa;
-                    if(a[i]<b[i]){
-                        return -1;
-                    }
-                    else if(a[i]>b[i]){
-                        return 1;
-                    }
+            if(a.length != b.length){
+                if(a[i]<b[i] && a[a.length-1] != b[b.length-1]){
+                    return -1;
+                }
 
+                else if (a[i]>b[i]){
+                    return 1;
                 }
-                else  if (a.length > b.length){
-                    b=tempb;
-                    if(a[i]<b[i]){
-                        return -1;
-                    }
-                    else if(a[i]>b[i]){
-                        return 1;
-                    }
-                }
-                else  if (a.length == b.length){
-                    if(a[i]<b[i]){
-                        return -1;
-                    }
-                    else if(a[i]>b[i]){
-                        return 1;
-                    }
-                }
-               
-               
             }
-        
-        
-        
+
+            else if (a.length == b.length){
+                if(a[i]<b[i]){
+                    return -1;
+                }
+
+                else if (a[i]>b[i]){
+                    return 1;
+                }
+            }
+
+            
+            if (a.length != b.length && a[length-1]==b[length-1]){
+                if(a.length>b.length){
+                    return 1;
+                }
+                else{
+                    return -1;
+                }
+            } 
+        }
+      
+          
         return 0;
     }
 }
