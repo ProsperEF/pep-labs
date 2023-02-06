@@ -66,7 +66,7 @@ public class FlightController {
         app.get("/flights/departing/{departure_city}/arriving/{arrival_city}",
                 this::getAllFlightsDepartingFromCityArrivingToCityHandler);
         return app;
-    }
+    } 
     /**
      * Handler to post a new flight.
      * The Jackson ObjectMapper will automatically convert the JSON of the POST request into a Flight object.
